@@ -55,17 +55,25 @@ body {
 }
 
 /* HERO / IMAGEM DE FUNDO */
-.hero {
+.inicio {
   height: 100vh;
   background-image: url('../imagens/homepage.jpeg') ; /* Troque pelo nome do seu arquivo */
   background-size: cover;
   background-position: center;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   text-shadow: 1px 1px 4px #000;
   padding-top: 80px; /* Compensa a navbar fixa */
+}
+
+.inicio h1{
+  backdrop-filter: blur(10px);
+  background-color: rgba(255,255,255,0);
+  font-size: 46px;
+  color: #DDD;
+  padding: 1rem 2rem;
+  border-radius: 8px;
 }
 
 /* Seções */
