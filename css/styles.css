@@ -1,0 +1,93 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 30px;
+   left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  background-color: rgba(0, 0, 0, 0.6); /* semi-transparente */
+  backdrop-filter: blur(8px);  /* efeito vidro fosco */
+  --background-color: #222;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-radius: 12px; /* borda arredondada da barra */
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding-left: 1rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding-left: 1rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffd700;
+}
+
+/* HERO / IMAGEM DE FUNDO */
+.hero {
+  height: 100vh;
+  background-image: url('../imagens/homepage.jpeg') ; /* Troque pelo nome do seu arquivo */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 1px 1px 4px #000;
+  padding-top: 80px; /* Compensa a navbar fixa */
+}
+
+/* Seções */
+section {
+  padding: 5rem 2rem;
+  margin-top: 60px;
+}
+
+.galeria {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.galeria img {
+  width: 200px;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f2f2f2;
+  margin-top: 2rem;
+}
