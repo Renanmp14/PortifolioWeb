@@ -172,7 +172,9 @@ section {
 }
 
 /* Projetos Guiados */
-
+.projetoG{
+  background-color: #ffa500;
+}
 .galeria {
   display: flex;
   gap: 1rem;
