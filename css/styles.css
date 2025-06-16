@@ -8,7 +8,6 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-
 }
 
 /* NAVBAR */
@@ -20,16 +19,12 @@ body {
   width: 90%;
   max-width: 1200px;
   background-color: rgba(0, 0, 0, 0.6);
-  /* semi-transparente */
   backdrop-filter: blur(8px);
-  /* efeito vidro fosco */
-  --background-color: #222;
   color: #ddd;
   display: flex;
   justify-content: space-between;
   padding: 1rem 2rem;
   border-radius: 12px;
-  /* borda arredondada da barra */
   z-index: 1000;
 }
 
@@ -61,7 +56,6 @@ body {
 .inicio {
   height: 100vh;
   background-image: url('../imagens/homepage.jpeg');
-  /* Troque pelo nome do seu arquivo */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -69,7 +63,7 @@ body {
   align-items: center;
   text-shadow: 1px 1px 4px #000;
   padding-top: 80px;
-  /* Compensa a navbar fixa */
+  background-attachment: fixed;
 }
 
 .inicio h1 {
@@ -106,7 +100,7 @@ section {
   font-weight: bold;
 }
 
-/* Seção dos projetos do GitHub */
+/* Projetos GitHub */
 .projetosGit {
   background-color: #333;
 }
@@ -130,7 +124,6 @@ section {
 }
 
 .repo-card {
-  box-sizing: border-box;
   background-color: #f4f4f4;
   opacity: 0.85;
   border: 1px solid #ddd;
@@ -139,14 +132,11 @@ section {
   width: 200px;
   height: 150px;
   flex: 0 0 auto;
-  min-width: unset;
-  min-height: unset;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.3s ease;
 }
-
 
 .repo-card:hover {
   transform: scale(1.05);
@@ -171,11 +161,9 @@ section {
   font-weight: bold;
 }
 
-/* Estilo dos botões de navegação do Swiper */
 .swiper-button-next,
 .swiper-button-prev {
   color: #ddd;
-  /* Ou outra cor que combine com o fundo */
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
@@ -189,13 +177,6 @@ section {
 .projetosGit .swiper-container {
   position: relative;
   padding: 40px 0;
-}
-
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* removendo margens extras se tiverem */
 }
 
 .swiper-wrapper-container {
@@ -225,7 +206,6 @@ section {
   color: #000;
 }
 
-
 /* Projetos Guiados */
 .projetoG {
   background-color: #ffa500;
@@ -233,13 +213,6 @@ section {
 
 .projetoG h2 {
   color: #222;
-}
-
-.galeria {
-  display: flex;
-  padding: 40px 0;
-  gap: 5rem;
-  flex-wrap: wrap;
 }
 
 .galeria {
@@ -259,7 +232,6 @@ section {
   transition: transform 0.4s ease, z-index 0.2s;
 }
 
-/* Imagem dentro do card */
 .card-img img {
   width: 100%;
   height: 100%;
@@ -268,7 +240,6 @@ section {
   transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* Legenda que aparece no hover */
 .legenda {
   position: absolute;
   bottom: 0;
@@ -286,12 +257,8 @@ section {
   border-bottom-right-radius: 8px;
 }
 
-/* Efeito de zoom nas imagens */
 .card-img:hover {
   overflow: visible;
-  position: relative;
-  z-index: 10;
-
   transform: scale(1.25);
   z-index: 10;
 }
@@ -307,8 +274,95 @@ section {
 
 /* Footer */
 footer {
+  font-size: 12px;
+  color: #333;
   text-align: center;
   padding: 2rem;
   background-color: #f2f2f2;
   margin-top: 2rem;
+}
+
+/* RESPONSIVIDADE */
+
+/* Smartphones (até 600px) */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .inicio {
+    background-attachment: scroll;
+  }
+
+  .inicio h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .repo-card {
+    width: 90%;
+    height: auto;
+  }
+
+  .galeria {
+    gap: 1rem;
+  }
+
+  .card-img {
+    width: 100%;
+    max-width: 280px;
+    height: 160px;
+  }
+
+  .card-img:hover {
+    transform: scale(1);
+  }
+
+  .botao-avancar {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+}
+
+/* Tablets (até 900px) */
+@media (max-width: 900px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .inicio h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .repo-card {
+    width: 150px;
+    height: 120px;
+  }
+
+  .card-img {
+    width: 45%;
+  }
 }

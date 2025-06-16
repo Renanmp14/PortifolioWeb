@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    text-align: center;
+    padding: 2rem;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #7F7FD5 0%, #91EAE4 98%);
+    color: #FFF;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+#top-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 300px;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: #FFF;
+    border-radius: 1rem;
+    color: #333;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    margin: 0 1rem;
+}
+
+.form-control label {
+    margin-bottom: 0.6rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.form-control input {
+    margin-bottom: 1rem;
+    flex: 1;
+    padding: 0.6rem 0.4rem;
+    width: 50px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#top-form input[type="submit"] {
+    max-height: 50px;
+    padding: 0.6rem 0.4rem;
+    width: 200px;
+    color: #FFF;
+    background-color: #333;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#tabuada-operations-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    margin: 1rem auto;
+    padding: 2rem 1rem;
+    background-color: #FFF;
+    color: #333;
+    border-radius: 0.9rem;
+}
+
+#tabuada-operations-container .row {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #CCC;
+    border-bottom: none;
+    padding: 0.5rem;
+    width: 150px;
+}
+
+#tabuada-operations-container .row:last-child {
+    border: 1px solid #CCC;
+}
+
+#tabuada-operations-container .result {
+    margin-left: 0.4rem;
+}
