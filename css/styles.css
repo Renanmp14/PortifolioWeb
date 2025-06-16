@@ -112,7 +112,7 @@ section {
 }
 
 .projetosGit h2 {
-  font-size: 30px;
+  font-size: 24px;
   color: #ddd;
 }
 
@@ -130,30 +130,36 @@ section {
 }
 
 .repo-card {
+  box-sizing: border-box;
   background-color: #f4f4f4;
   opacity: 0.85;
   border: 1px solid #ddd;
   border-radius: 10px;
-  padding: 16px;
-  width: 280px;
-  height: 200px;
-  transition: transform 0.3s ease;
+  padding: 12px;
+  width: 200px;
+  height: 150px;
+  flex: 0 0 auto;
+  min-width: unset;
+  min-height: unset;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: transform 0.3s ease;
 }
+
 
 .repo-card:hover {
   transform: scale(1.05);
 }
 
 .repo-card h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 5%;
+  margin-bottom: 0.5rem;
 }
 
 .repo-card p {
-  font-size: 14px;
+  font-size: 10px;
   color: #333;
   flex-grow: 1;
 }
@@ -184,6 +190,41 @@ section {
   position: relative;
   padding: 40px 0;
 }
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* removendo margens extras se tiverem */
+}
+
+.swiper-wrapper-container {
+  position: relative;
+}
+
+.botao-avancar {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  transition: background 0.3s ease;
+}
+
+.botao-avancar:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+}
+
 
 /* Projetos Guiados */
 .projetoG {

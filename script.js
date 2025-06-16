@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const container = document.getElementById("repositorios");
 
   fetch("https://api.github.com/users/Renanmp14/repos")
-   .then(response => response.json())
+    .then(response => response.json())
     .then(repos => {
       const wrapper = document.querySelector(".swiper-wrapper");
 
@@ -21,14 +21,14 @@ document.addEventListener("DOMContentLoaded", function () {
         wrapper.appendChild(slide);
       });
 
-      // Inicializa o Swiper depois que os slides foram adicionados
-      new Swiper(".swiper-container", {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        loop: true,
-        centeredSlides: true,
+      // Cria uma instância única do Swiper
+      const swiperInstance = new Swiper(".swiper-container", {
+        slidesPerView: 1.2,
+        spaceBetween: 16,
+        loop: false,
+        centeredSlides: false,
         autoplay: {
-          delay: 3000,
+          delay: 4000,
           disableOnInteraction: false,
         },
         pagination: {
@@ -41,18 +41,26 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         breakpoints: {
           768: {
-            slidesPerView: 2
+            slidesPerView: 2.5
           },
           1024: {
-            slidesPerView: 3
+            slidesPerView: 3.5
           },
-          2048: {
-            slidesPerView: 4
-          },
-          3400: {
-            slidesPerView: 5
+          1440: {
+            slidesPerView: 4.5
           }
         }
       });
+
+      // Botão externo para avançar
+      const btnAvancar = document.getElementById("btn-avancar");
+      if (btnAvancar) {
+        btnAvancar.addEventListener("click", () => {
+          swiperInstance.slideNext();
+        });
+      }
+    })
+    .catch(error => {
+      console.error("Erro ao buscar repositórios:", error);
     });
 });
