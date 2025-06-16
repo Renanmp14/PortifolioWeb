@@ -272,6 +272,63 @@ section {
   opacity: 1;
 }
 
+.curriculo-section {
+  background-color: #f5f5f5;
+  padding: 4rem 2rem;
+}
+
+.curriculo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.curriculo-foto img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.curriculo-barra {
+  width: 2px;
+  height: 150px;
+  background-color: #888;
+}
+
+.curriculo-conteudo {
+  max-width: 450px;
+}
+
+.curriculo-conteudo h2 {
+  font-size: 28px;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.curriculo-conteudo p {
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+
+.curriculo-conteudo a {
+  background-color: #ffa500;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.curriculo-conteudo a:hover {
+  background-color: #e69500;
+}
+
+
 /* Footer */
 footer {
   font-size: 12px;
@@ -279,7 +336,6 @@ footer {
   text-align: center;
   padding: 2rem;
   background-color: #f2f2f2;
-  margin-top: 2rem;
 }
 
 /* RESPONSIVIDADE */
@@ -364,5 +420,21 @@ footer {
 
   .card-img {
     width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .curriculo-barra {
+    display: none;
+  }
+
+  .curriculo-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .curriculo-conteudo {
+    max-width: 90%;
   }
 }
