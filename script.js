@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const swiperInstance = new Swiper(".swiper-container", {
         slidesPerView: 1.2,
         spaceBetween: 16,
-        loop: false,
+        loop: true,
         centeredSlides: false,
         autoplay: {
           delay: 4000,
