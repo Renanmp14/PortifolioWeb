@@ -45,14 +45,24 @@ body {
   color: #ddd;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: color 0.8s;
 }
 
 .nav-links a:hover {
   color: #ffd700;
 }
 
-/* HERO / IMAGEM DE FUNDO */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #ddd;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* IMAGEM DE FUNDO */
 .inicio {
   height: 100vh;
   background-image: url('../imagens/homepage.jpeg');
@@ -139,17 +149,17 @@ section {
 }
 
 .repo-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.15);
 }
 
 .repo-card h3 {
   font-size: 12px;
   line-height: 5%;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .repo-card p {
-  font-size: 10px;
+  font-size: 12px;
   color: #333;
   flex-grow: 1;
 }
@@ -183,11 +193,10 @@ section {
   position: relative;
 }
 
-.botao-avancar {
+.botao-avancar,
+.botao-voltar {
   position: absolute;
   top: 50%;
-  right: 0;
-  transform: translate(50%, -50%);
   z-index: 20;
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
@@ -201,7 +210,18 @@ section {
   transition: background 0.3s ease;
 }
 
-.botao-avancar:hover {
+.botao-avancar {
+  right: 0;
+  transform: translate(25%, -50%);
+}
+
+.botao-voltar {
+  left: 0;
+  transform: translate(-25%, -50%);
+}
+
+.botao-avancar:hover,
+.botao-voltar:hover {
   background-color: rgba(255, 255, 255, 0.8);
   color: #000;
 }
@@ -401,7 +421,8 @@ footer {
     transform: scale(1);
   }
 
-  .botao-avancar {
+  .botao-avancar,
+  .botao-voltar {
     width: 36px;
     height: 36px;
     font-size: 18px;
@@ -436,8 +457,8 @@ footer {
   }
 
   .repo-card {
-    width: 150px;
-    height: 120px;
+    width: 200px;
+    height: 150px;
   }
 
   .card-img {
@@ -489,18 +510,8 @@ footer {
   }
 
   .menu-toggle {
-    display: block !important;
+    display: block;
     z-index: 1001;
     position: relative;
   }
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  background: none;
-  border: none;
-  color: #ddd;
-  cursor: pointer;
-  margin-left: auto;
 }

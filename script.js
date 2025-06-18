@@ -41,6 +41,9 @@ document.addEventListener("DOMContentLoaded", function () {
           prevEl: ".swiper-button-prev",
         },
         breakpoints: {
+          600: {
+            slidesPerView: 1.5
+          },
           768: {
             slidesPerView: 2.5
           },
@@ -53,13 +56,21 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
-      // Botão externo para avançar manualmente o Swiper
+      // Botão externo para avançar e retornar manualmente o Swiper
       const btnAvancar = document.getElementById("btn-avancar");
       if (btnAvancar) {
         btnAvancar.addEventListener("click", () => {
           swiperInstance.slideNext();
         });
       }
+
+      const btnVoltar = document.getElementById("btn-voltar");
+      if (btnVoltar) {
+        btnVoltar.addEventListener("click", () => {
+          swiperInstance.slidePrev();
+        });
+      }
+
     })
     .catch(error => {
       console.error("Erro ao buscar repositórios:", error);
