@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const container = document.getElementById("repositorios");
 
+  // Buscar repositórios do GitHub
   fetch("https://api.github.com/users/Renanmp14/repos")
     .then(response => response.json())
     .then(repos => {
@@ -21,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         wrapper.appendChild(slide);
       });
 
-      // Cria uma instância única do Swiper
+      // Inicializar o Swiper
       const swiperInstance = new Swiper(".swiper-container", {
         slidesPerView: 1.2,
         spaceBetween: 16,
@@ -52,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
-      // Botão externo para avançar
+      // Botão externo para avançar manualmente o Swiper
       const btnAvancar = document.getElementById("btn-avancar");
       if (btnAvancar) {
         btnAvancar.addEventListener("click", () => {
@@ -63,4 +64,14 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch(error => {
       console.error("Erro ao buscar repositórios:", error);
     });
+
+  // Funcionalidade do botão do menu (navbar mobile)
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  }
 });

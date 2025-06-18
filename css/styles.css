@@ -258,10 +258,11 @@ section {
 }
 
 .card-img:hover {
-  overflow: visible;
-  transform: scale(1.25);
+  transform: scale(1.05);
   z-index: 10;
+  overflow: hidden;
 }
+
 
 .card-img:hover img {
   filter: brightness(1.1);
@@ -355,6 +356,10 @@ footer {
     gap: 0.5rem;
   }
 
+  .nav-links a {
+    font-size: 12px;
+  }
+
   .inicio {
     background-attachment: scroll;
   }
@@ -377,10 +382,19 @@ footer {
     gap: 1rem;
   }
 
+  .galeria a {
+    display: block;
+    width: 200px;
+    height: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+  }
+
   .card-img {
     width: 100%;
     max-width: 280px;
-    height: 160px;
+    height: 150px;
   }
 
   .card-img:hover {
@@ -408,6 +422,14 @@ footer {
     gap: 1rem;
   }
 
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .repo-card a {
+    font-size: 12px;
+  }
+
   .inicio h1 {
     font-size: 32px;
     text-align: center;
@@ -419,11 +441,17 @@ footer {
   }
 
   .card-img {
-    width: 45%;
+    max-width: 150px;
+    width: 100%;
+    height: 100%;
   }
 }
 
 @media (max-width: 768px) {
+  .repo-card a {
+    font-size: 12px;
+  }
+
   .curriculo-barra {
     display: none;
   }
@@ -437,4 +465,42 @@ footer {
   .curriculo-conteudo {
     max-width: 90%;
   }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 1rem;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 1rem;
+    border-radius: 8px;
+    gap: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block !important;
+    z-index: 1001;
+    position: relative;
+  }
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #ddd;
+  cursor: pointer;
+  margin-left: auto;
 }
